@@ -11,7 +11,5 @@ public class TipoVariable {
 
         double salario = 1500.5;                        // Variable tipo decimal.
         System.out.println("Su salario es " + salario);   
-        
-        
     }
 }
