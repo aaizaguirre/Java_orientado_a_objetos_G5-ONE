@@ -1,15 +1,22 @@
 public class CrearCuenta {
     public static void main(String[] args) {
-        Cuenta primeraCuenta = new Cuenta();
-        primeraCuenta.saldo = 1000;
-        primeraCuenta.agencia = 01;
-        primeraCuenta.numero = 98765;
-        primeraCuenta.titular = "Diego";
+        Cuenta primeraCuenta = new Cuenta(11);
+        
+        Cliente primerCliente = new Cliente();
+        Cliente segundoCliente = new Cliente();
 
-        Cuenta segundaCuenta = new Cuenta();
-        segundaCuenta.saldo = 1000;
-        segundaCuenta.agencia = 02;
-        segundaCuenta.numero = 12345;
-        segundaCuenta.titular = "Alura";
+        primeraCuenta.setSaldo(1000);
+        primeraCuenta.setAgencia(13);
+        primeraCuenta.setNumero(98765);
+        primeraCuenta.setTitular(primerCliente);
+
+        Cuenta segundaCuenta = new Cuenta(22);
+        segundaCuenta.setSaldo(1000);
+        segundaCuenta.setAgencia(23);
+        segundaCuenta.setNumero(12345);
+        segundaCuenta.setTitular(segundoCliente);
+
+        System.out.println(primeraCuenta.getAgencia());
+        System.out.println(Cuenta.total);
     }
 }

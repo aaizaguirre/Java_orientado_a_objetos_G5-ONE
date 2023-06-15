@@ -1,20 +1,20 @@
 public class PruebaMetodos {
     public static void main(String[] args) {
-        Cuenta miCuenta = new Cuenta();
-        miCuenta.saldo = 300;
+        Cuenta miCuenta = new Cuenta(02);
+        miCuenta.setSaldo(300); 
 
         miCuenta.depositar(200);
-        System.out.println(miCuenta.saldo);
+        System.out.println(miCuenta.getSaldo());
 
         miCuenta.retirar(2000);
-        System.out.println(miCuenta.saldo);
+        System.out.println(miCuenta.getSaldo());
 
-        Cuenta cuentaJimena = new Cuenta();
+        Cuenta cuentaJimena = new Cuenta(-33);
 
         cuentaJimena.depositar(1000);
         cuentaJimena.transferir(400, miCuenta);
         
-        System.out.println(miCuenta.saldo);
-        System.out.println(cuentaJimena.saldo);
+        System.out.println(miCuenta.getSaldo());
+        System.out.println(cuentaJimena.getSaldo());
     }   
 }
