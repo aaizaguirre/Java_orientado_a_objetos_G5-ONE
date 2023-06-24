@@ -1,4 +1,5 @@
-public class Funcionario {
+// class "abstract": clase padre, muy general. Las clases hijas definen los detalles. Debe poseer por lo menos 1 método abstracto o vacío del cual las clases hijas heredan y sobreescriben. Deben tener una clase hija no abstracta. 
+public abstract class Funcionario {
     private String nombre;
     private String documento;
     private double salario;
@@ -27,7 +28,6 @@ public class Funcionario {
         this.salario = salario;
     }
 
-    public double getBonificacion(){
-        return this.salario*0.1;
-    }
+    public abstract double getBonificacion();  // Método abstracto 
+
 }
